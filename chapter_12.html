@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Tables</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <script>
+
+    // TBD - Your JavaScript code would go here
+
+    // Make sure to delete the HTML code that generates the table below so that the table is ONLY generated
+
+    // using your JavaScript code
+
+    //Reminder: When running a file on Live Server, REMEMBER TO SAVE FIRST
+
+      function crFunction() {
+        var tbl = document.getElementById("carTable"); //put id in (), not variable's name
+        var row = tbl.insertRow(); //insertRow will let button insert row on chart
+        var cell1 = row.insertCell();
+        var cell2 = row.insertCell();
+        var cell3 = row.insertCell();
+        cell1.innerHTML = document.getElementById("crName").value;
+        cell2.innerHTML = document.getElementById("crSpeed").value;
+        cell3.innerHTML = document.getElementById("crPrice").value;
+
+      }
+    </script>
+  </body>
+  <form onsubmit = "crFunction(); return false;" required>
+    <!-- placeholder is the text in text box with instructions on what to put-->
+    <!-- required lets user knows something has to be inputed -->
+    <!-- min limits what number is inputted by user  -->
+    <!-- required lets user knows something has to be inputed -->
+    <input type = "text" id = "crName" placeholder = "Enter the Car's Name" required/> Enter the Car's Name <br/>
+    <input type = "Number" min = 1 id = "crSpeed" placeholder = "Enter the Car's Top Speed" required/> Enter the Car's Top Speed <br/>
+    <input type = "Number" min = 1 id = "crPrice" placeholder = "Enter the Car's Price" required/> Enter the Car's Price <br/>
+
+    <!-- submit button -->
+    <input type = "submit" value = "Add to Chart">
+    <!-- clear button -->
+    <input type = "reset" value = "Clear">
+  </form>
+
+  <h1> Car Record </h1>
+  <table border = 1 id = "carTable">
+    <tr>
+      <td> Car's Name </td>
+      <td> Top Speed in Miles Per Hour (mph) </td>
+      <td> Price in US Dollars ($) </td>
+    </tr>
+  </table>
+
+</html>
